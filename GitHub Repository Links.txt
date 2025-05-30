@@ -1,0 +1,8 @@
+GitHub Repository Links:
+
+All the code demonstrations covered in this course can be referenced using the GitHub repository below. We strongly recommend implementing these examples in your own environment to gain hands-on experience and strengthen your understanding of Cloud Native Buildpacks concepts.
+
+
+
+https://github.com/yogeshraheja/Cloud-Native-Buildpacks-for-the-Absolute-Beginners-HandsOn
+https://github.com/yogeshraheja/demo-kpack
