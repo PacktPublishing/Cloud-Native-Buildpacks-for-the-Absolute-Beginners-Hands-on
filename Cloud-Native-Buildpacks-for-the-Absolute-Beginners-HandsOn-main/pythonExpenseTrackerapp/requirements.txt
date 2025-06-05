@@ -1,0 +1,4 @@
+psycopg2
+urllib3
+mimetype
+jinja2

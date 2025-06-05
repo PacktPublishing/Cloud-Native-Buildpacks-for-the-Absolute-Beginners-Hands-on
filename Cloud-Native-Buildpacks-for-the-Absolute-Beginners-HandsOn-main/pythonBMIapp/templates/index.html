@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thinknyx BMI Calculator</title>
+    <style>
+        h1 {text-align: center;}
+        
+        form {text-align: center;}
+    
+    </style>
+    
+</head>
+<body>
+    <center><img height="48px" src="https://www.thinknyx.com/wp-content/uploads/2023/08/Thinknyx_Trans_logo.png" alt="Thinknyx Logo" ></center>
+    
+    <h1>BMI Calculator</h1>
+    
+    <form method="POST" action="/result">
+        <label for="height">Height (cm):</label>
+        <input type="text" name="height" required>
+        <br>
+        <br>
+        <label for="weight">Weight (kg):</label>
+        <input type="text" name="weight" required>
+        <br><br>
+        <input type="submit" value="Calculate BMI">
+    </form>
+</body>
+</html>

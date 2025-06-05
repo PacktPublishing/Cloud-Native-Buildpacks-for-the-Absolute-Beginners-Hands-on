@@ -1,0 +1,7 @@
+apiVersion: kpack.io/v1alpha2
+kind: ClusterStore
+metadata:
+  name: my-new-store
+spec:
+  sources:
+  - image: gcr.io/paketo-buildpacks/python

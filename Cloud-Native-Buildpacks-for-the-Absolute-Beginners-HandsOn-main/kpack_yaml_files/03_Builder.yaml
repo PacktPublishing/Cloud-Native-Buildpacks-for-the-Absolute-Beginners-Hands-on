@@ -1,0 +1,17 @@
+apiVersion: kpack.io/v1alpha2
+kind: Builder
+metadata:
+  name: my-new-builder
+  namespace: default
+spec:
+  serviceAccountName: default
+  tag: yogeshraheja/kpackimage
+  stack:
+    name: my-new-stack
+    kind: ClusterStack
+  store:
+    name: my-new-store
+    kind: ClusterStore
+  order:
+  - group:
+    - id: paketo-buildpacks/python

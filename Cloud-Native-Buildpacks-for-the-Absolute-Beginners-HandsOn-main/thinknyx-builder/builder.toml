@@ -1,0 +1,15 @@
+# Buildpacks to include in builder
+[[buildpacks]]
+# Packaged buildpacks to include in builder;
+# the "hello-universe" package contains the "hello-world" and "hello-moon" buildpacks
+uri = "docker://yogeshraheja/thinknyx-nodejs-buildpack"
+[[order]]
+[[order.group]]
+id = "my-nodejs-buildpack"
+version = "0.0.1"
+# Base images used to create the builder
+[build]
+image = "yogeshraheja/sample-base-build:noble"
+[run]
+[[run.images]]
+image = "yogeshraheja/sample-base-run:noble"

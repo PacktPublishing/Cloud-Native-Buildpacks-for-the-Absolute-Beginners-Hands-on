@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/script.js" defer></script>
+</head>
+<body>
+    <h1>Expense Tracker</h1>
+    
+    <div class="grid-container">
+        <form id="expense-form" method="post">
+            <label for="name">Expense Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" required>
+            
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                {% for category in categories %}
+                    <option value="{{ category }}">{{ category }}</option>
+                {% endfor %}
+            </select>
+    
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <button type="submit">Add Expense</button>
+        </form>
+        
+        <form method="get">
+            <label for="filter-date">Filter by Date:</label>
+            <input type="date" id="filter-date" name="filter-date">
+    
+            <label for="filter-category">Filter by Category:</label>
+            <select id="filter-category" name="filter-category">
+                <option value="">All</option>
+                {% for category in categories %}
+                    <option value="{{ category }}" >{{ category }}</option>
+                {% endfor %}
+            </select>
+    
+            <button type="submit">Filter</button>
+        </form>
+        
+        <div class="expenses">
+            <h2>Total Expenses: ${{ total_expenses }}</h2>
+            <h3>Expenses:</h3>
+            <ul>
+                {% for expense in expenses %}
+                    <li class="expense-item">
+                        <span class="expense-name">{{ expense.name }}</span>
+                        <span class="expense-amount">${{ expense.amount }}</span>
+                        <span class="expense-category">{{ expense.category }}</span>
+                        <span class="expense-date">{{ expense.date }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>
